@@ -1,2 +1,12 @@
-<h1>Dashboard#show</h1>
-<p>Find me in app/views/dashboard/show.html.erb</p>
+<div id="profile">
+   <h3>Your Facebook Information</h3>
+   <img src='https://graph.facebook.com/<%= @profile["id"] %>/picture' alt='picture'>
+   <div class="profile_info"> 
+      <h4>Name: <%= @profile["first_name"] %> <%= @profile["last_name"] %></h2>
+      <h4>Email Address: <%= @profile["email"] %></h4>
+      <h4>Facebook Friends</h4>
+      <% @friends.each do |friend| %>
+      	<p><%= friend["name"] %></p>
+      <% end %>
+   </div> 
+</div> 
