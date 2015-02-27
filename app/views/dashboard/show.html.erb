@@ -1,13 +1,15 @@
 <div id="profile">
-   <h3>Your Facebook Information</h3>
+   <h1>Your Facebook Information</h1>
    <img src='https://graph.facebook.com/<%= @profile["id"] %>/picture' alt='picture'>
    <div class="profile_info"> 
       <h4>Name: <%= @profile["name"] %></h2>
-      <h4>Email Address: <%= @profile["email"] %></h4>
-      <h4>Facebook Friends Who Also Use This App</h4>
+      <h4>Email Address: <%= @profile["email"] %></h3>
+      <h3>Facebook Friends Who Also Use This App</h4>
       <% @friends.each do |friend| %>
-      	<p><%= friend["name"] %></p>
-         <%= image_tag friend["picture"]["data"]["url"] %>
+         <div class="contact_box">
+         	<h4><%= friend["name"] %></h4>
+            <%= image_tag friend["picture"]["data"]["url"] %>
+         </div>
       <% end %>
    </div> 
 </div> 
