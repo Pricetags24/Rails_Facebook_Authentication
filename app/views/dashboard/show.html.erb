@@ -4,9 +4,10 @@
    <div class="profile_info"> 
       <h4>Name: <%= @profile["name"] %></h2>
       <h4>Email Address: <%= @profile["email"] %></h4>
-      <h4>Facebook Friends</h4>
+      <h4>Facebook Friends Who Also Use This App</h4>
       <% @friends.each do |friend| %>
       	<p><%= friend["name"] %></p>
+         <%= image_tag friend["picture"]["data"]["url"] %>
       <% end %>
    </div> 
 </div> 
